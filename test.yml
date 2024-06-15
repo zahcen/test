@@ -1,0 +1,14 @@
+---
+- hosts: all
+  gather_facts: no
+
+  tasks:
+
+  - debug:
+      var: hostvars[inventory_hostname]
+      
+  - name: debug
+    debug:
+      msg: "TEST env={{ env}} inventory_hostname={{inventory_hostname}}"
+
+
